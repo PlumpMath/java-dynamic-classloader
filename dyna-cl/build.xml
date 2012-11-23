@@ -1,0 +1,12 @@
+<project name="dyna-cl" basedir="." default="mkjar">
+    <target name="compile">
+    	<javac srcdir="sources" destdir="classes" includes="**/*" includeantruntime="false"/>
+    </target>
+	<target name="mkjar" depends="compile">
+		<jar destfile="../dyna-cl-cwd/dyna-cl.jar" manifest="sources/META-INF/MANIFEST.MF">
+			<fileset dir="classes">
+				<include name="**/*"/>
+			</fileset>
+		</jar>
+	</target>
+</project>

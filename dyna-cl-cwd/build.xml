@@ -1,0 +1,5 @@
+<project name="dyna-cl-cwd" basedir="." default="run">
+    <target name="run">
+		<java jar="dyna-cl.jar" fork="true"/>
+	</target>
+</project>

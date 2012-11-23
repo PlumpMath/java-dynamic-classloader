@@ -1,0 +1,24 @@
+<project name="dyna-cl-module1" basedir="." default="mkjar">
+    <path id="class.path">
+        <fileset dir="../dyna-cl-cwd">
+            <include name="dyna-cl.jar"/>
+        </fileset>
+    </path>
+    <target name="compile">
+    	<javac srcdir="sources" destdir="classes"
+            includes="**/*" includeantruntime="false"
+            debug="true" debuglevel="lines,vars,source">
+            <classpath refid="class.path"/>
+        </javac>
+    </target>
+	<target name="mkjar" depends="compile">
+		<jar destfile="../dyna-cl-cwd/modules/dyna-cl-module1.jar">
+			<fileset dir="classes">
+				<include name="**/*"/>
+			</fileset>
+			<fileset dir="sources">
+				<include name="def"/>
+			</fileset>
+		</jar>
+	</target>
+</project>

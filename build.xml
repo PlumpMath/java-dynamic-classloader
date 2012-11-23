@@ -1,0 +1,7 @@
+<project name="dynamic-classloader" basedir="." default="run-test">
+	<target name="run-test">
+		<ant antfile="build.xml" dir="dyna-cl"/>
+		<ant antfile="build.xml" dir="dyna-cl-module1"/>
+		<ant antfile="build.xml" dir="dyna-cl-cwd"/>
+	</target>
+</project>

@@ -1,0 +1,3 @@
+modulename=dyna-cl-module1
+version=1
+entrypoint=module1.Main
